@@ -1,3 +1,6 @@
+using DentoApp.Entity;
+using Microsoft.EntityFrameworkCore;
+
 namespace DentoApp.Data.Concrete.EfCore
 {
     public class DentoContext : DbContext
