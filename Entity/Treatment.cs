@@ -9,5 +9,5 @@ public class Treatment
     public string? TreatmentType { get; set; }
     public int TreatmentDuration { get; set; }
     public string? TreatmentDescription { get; set; }
-    public double price { get; set; }
+    public double Price { get; set; }
 }

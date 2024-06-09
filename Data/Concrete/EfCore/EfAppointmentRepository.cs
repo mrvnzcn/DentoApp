@@ -1,4 +1,5 @@
 using DentoApp.Data.Abstract;
+using DentoApp.Data.Concrete.EfCore;
 using DentoApp.Entity;
 
 namespace DentoApp.Data.Concrete

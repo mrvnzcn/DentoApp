@@ -8,14 +8,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+
+
+
 builder.Services.AddDbContext<DentoContext>(options => {options.UseSqlite(builder.Configuration["ConnectionStrings:sql_connection"]);});
 
-builder.Services.AddScoped<IDentistRepository, EfDentistRepository>();
-builder.Services.AddScoped<IPatientRepository, EfPatientRepository>();
-builder.Services.AddScoped<IAppointmentRepository, EfAppointmentRepository>();
-builder.Services.AddScoped<ITreatmentRepository, EfTreatmentRepository>();
+// builder.Services.AddScoped<IDentistRepository, EfDentistRepository>();
+// builder.Services.AddScoped<IPatientRepository, EfPatientRepository>();
+// builder.Services.AddScoped<IAppointmentRepository, EfAppointmentRepository>();
+// builder.Services.AddScoped<ITreatmentRepository, EfTreatmentRepository>();
 
 var app = builder.Build();
+
+SeedData.AddTestData(app);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
