@@ -1,6 +1,7 @@
 using DentoApp.Data.Abstract;
 using DentoApp.Data.Concrete;
 using DentoApp.Data.Concrete.EfCore;
+using DentoApp.Data.Concrete.EfCore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -18,7 +19,7 @@ builder.Services.AddDbContext<DentoContext>(options => {
 
 var app = builder.Build();
 
-SeedData.AddTestData(app);
+// SeedData.AddTestData(app);
 
 app.MapGet("/",() => "Hello World");
 app.Run();
