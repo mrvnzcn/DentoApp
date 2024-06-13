@@ -8,4 +8,6 @@ public class Appointment
     public DateTime AppointmentDate { get; set; }
     public string? TreatmentType { get; set; }
     public string? Notes { get; set; }
+    public Patient? Patient { get; set; }
+    public Dentist? Dentist { get; set; }
 }

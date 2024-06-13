@@ -10,8 +10,10 @@ public class Dentist
     public string? Email { get; set; }
     public string? Gender { get; set; }
     public List<Patient> Patients { get; set; } = new List<Patient>();
-    public List<Appointment> Appointments { get; set; } = new List<Appointment>();
+    public List<Appointment>? Appointments { get; set; } = new List<Appointment>();
     public List<string>? WorkingHours { get; set; }
+
+    public Patient? Patient { get; set; }
 
 
 }

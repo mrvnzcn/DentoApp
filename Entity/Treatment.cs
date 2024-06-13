@@ -10,4 +10,6 @@ public class Treatment
     public int TreatmentDuration { get; set; }
     public string? TreatmentDescription { get; set; }
     public double Price { get; set; }
+    public Patient? Patient { get; set; }
+    public Dentist? Dentist { get; set; }
 }
