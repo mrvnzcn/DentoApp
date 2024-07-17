@@ -1,0 +1,26 @@
+@model DentoApp.Models.PatientsViewModel
+
+<h1>Patients</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patient in Model.Patients)
+        {
+            <tr>
+                <td>@patient.Id</td>
+                <td>@patient.Name</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = patient.Id })">Edit</a>
+                    <a href="@Url.Action("Delete", new { id = patient.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

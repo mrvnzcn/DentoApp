@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DentoApp.Migrations
 {
     [DbContext(typeof(DentoContext))]
-    [Migration("20240613174211_InitialCreate")]
+    [Migration("20240717203632_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
