@@ -1,6 +1,7 @@
 using DentoApp.Models;
 using DentoApp.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using DentoApp.Entity;
 
 namespace DentoApp.Controllers
 {
@@ -21,6 +22,23 @@ namespace DentoApp.Controllers
             };
 
             return View(viewModel);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Appointment appointment)
+        {
+            if (ModelState.IsValid)
+            {
+                _appointmentService.AddAppointment(appointment);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(appointment);
         }
     }
 }

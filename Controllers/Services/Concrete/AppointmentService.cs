@@ -25,6 +25,7 @@ namespace DentoApp.Services.Concrete
         public void AddAppointment(Appointment appointment)
         {
             // Eklemek için ilgili repository methodunu çağır
+            _appointmentRepository.Add(appointment);
         }
 
         public void UpdateAppointment(Appointment appointment)
