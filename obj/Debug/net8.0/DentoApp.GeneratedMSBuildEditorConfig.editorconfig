@@ -9,55 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DentoApp
 build_property.RootNamespace = DentoApp
-build_property.ProjectDir = C:\Users\gs_me\OneDrive\Masaüstü\Patika\DentoApp\
+build_property.ProjectDir = c:\Users\gs_me\OneDrive\Masaüstü\Patika\DentoApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\gs_me\OneDrive\Masaüstü\Patika\DentoApp
+build_property.MSBuildProjectDirectory = c:\Users\gs_me\OneDrive\Masaüstü\Patika\DentoApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Appointment/Index.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Appointment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Dentist/Index.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Dentist/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVudGlzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Home/Index.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Home/Privacy.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Patient/Index.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Patient/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Patient/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Patient/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Patient/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Shared/Error.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Treatment/Index.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Treatment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJlYXRtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/_ViewImports.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/_ViewStart.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Shared/_Layout.cshtml]
+[c:/Users/gs_me/OneDrive/Masaüstü/Patika/DentoApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-m4t6lngmrt

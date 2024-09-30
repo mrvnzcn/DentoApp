@@ -2,6 +2,11 @@
 
 <h1>Patients</h1>
 
+<!-- CRUD Butonları -->
+<div class="mb-3">
+    <a class="btn btn-success" href="@Url.Action("Create")">Add New Patient</a>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -17,8 +22,8 @@
                 <td>@patient.Id</td>
                 <td>@patient.Name</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = patient.Id })">Edit</a>
-                    <a href="@Url.Action("Delete", new { id = patient.Id })">Delete</a>
+                    <a class="btn btn-warning" href="@Url.Action("Edit", new { id = patient.Id })">Edit</a>
+                    <a class="btn btn-danger" href="@Url.Action("Delete", new { id = patient.Id })">Delete</a>
                 </td>
             </tr>
         }

@@ -19,22 +19,29 @@ namespace DentoApp.Services.Concrete
 
         public Patient GetPatientById(int id)
         {
-            return _patientRepository.Patients.FirstOrDefault(t => t.Id == id);
+            return _patientRepository.GetPatientById(id);
         }
 
         public void AddPatient(Patient patient)
         {
-            // Eklemek için ilgili repository methodunu çağır
+            _patientRepository.Add(patient);
         }
 
         public void UpdatePatient(Patient patient)
         {
-            // Güncellemek için ilgili repository methodunu çağır
+            _patientRepository.UpdatePatient(patient);  // Repository katmanında güncelleme işlemi yapılır
         }
 
-        public void DeletePatient(int id)
+        public bool DeletePatient(int id)
         {
-            // Silmek için ilgili repository methodunu çağır
+            var patient = _patientRepository.GetPatientById(id);
+            if(patient == null)
+            {
+                return false;
+            }
+
+            _patientRepository.Delete(patient);
+            return true;
         }
     }
 }
