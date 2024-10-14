@@ -8,6 +8,6 @@ namespace DentoApp.Services.Abstract
         Dentist GetDentistById(int id);
         void AddDentist(Dentist dentist);
         void UpdateDentist(Dentist dentist);
-        void DeleteDentist(int id);
+        bool DeleteDentist(int id);
     }
 }

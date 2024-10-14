@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj": {}
+    "C:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj": {
+    "C:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj",
+        "projectUniqueName": "C:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj",
         "projectName": "DentoApp",
-        "projectPath": "c:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj",
+        "projectPath": "C:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\DentoApp.csproj",
         "packagesPath": "C:\\Users\\gs_me\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\obj\\",
+        "outputPath": "C:\\Users\\gs_me\\OneDrive\\Masaüstü\\Patika\\DentoApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gs_me\\AppData\\Roaming\\NuGet\\NuGet.Config"
