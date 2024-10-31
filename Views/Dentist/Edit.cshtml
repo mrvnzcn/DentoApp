@@ -20,7 +20,9 @@
 
     <div class="mb-3">
         <label asp-for="Profession" class="form-label"></label>
-        <input asp-for="Profession" class="form-control" />
+        <select asp-for="Profession" asp-items="Html.GetEnumSelectList<DentistProfession>()" class="form-select">
+            <option value="" disabled>Select Profession</option>
+        </select>
         <span asp-validation-for="Profession" class="text-danger"></span>
     </div>
 

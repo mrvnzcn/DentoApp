@@ -7,5 +7,7 @@ namespace DentoApp.Models
         public List<Dentist> Dentists { get; set; } = new();
 
         public Dentist? SingleDentist { get; set; }
+
+        public DentistProfession Profession { get; set; }
     }
 }

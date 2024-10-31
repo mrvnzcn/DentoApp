@@ -2,6 +2,8 @@ using DentoApp.Entity;
 using DentoApp.Models;
 using DentoApp.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace DentoApp.Controllers
 {
@@ -103,6 +105,8 @@ namespace DentoApp.Controllers
             {
                 return NotFound();  // Eğer hasta bulunamazsa 404 döner
             }
+
+            
 
             var viewModel = new DentistsViewModel
             {
