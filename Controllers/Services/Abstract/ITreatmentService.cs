@@ -9,5 +9,7 @@ namespace DentoApp.Services.Abstract
         void AddTreatment(Treatment treatment);
         void UpdateTreatment(Treatment treatment);
         void DeleteTreatment(int id);
+        IQueryable<Patient> GetPatients(); // Yeni metot
+        IQueryable<Dentist> GetDentists(); // Yeni metot
     }
 }

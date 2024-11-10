@@ -14,5 +14,11 @@ namespace DentoApp.Data.Concrete
         }
 
         public IQueryable<Treatment> Treatments => _context.Treatments;
+
+        public void Add(Treatment treatment)
+        {
+            _context.Treatments.Add(treatment);
+            _context.SaveChanges(); // Değişiklikleri kaydet
+        }
     }
 }

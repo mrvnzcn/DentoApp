@@ -1,0 +1,64 @@
+@model DentoApp.Entity.Treatment
+
+@{
+    ViewData["Title"] = "Create Treatment";
+}
+
+<h1>Create Treatment</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="PatientId" class="form-label">Patient</label>
+        <select asp-for="PatientId" class="form-control" asp-items="ViewBag.Patients">
+            <option value="">Select Patient</option>
+        </select>
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DentistId" class="form-label">Dentist</label>
+        <select asp-for="DentistId" class="form-control" asp-items="ViewBag.Dentists">
+            <option value="">Select Dentist</option>
+        </select>
+        <span asp-validation-for="DentistId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="TreatmentType" class="form-label">Treatmen Type</label>
+        <select asp-for="TreatmentType" class="form-select" asp-items="Html.GetEnumSelectList<TreatmentType>()">
+            <option value="">Select Treatment Type</option>
+        </select>
+        <span asp-validation-for="TreatmentType" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TreatmentDuration" class="form-label">Treatment Duration</label>
+        <input asp-for="TreatmentDuration" class="form-control" />
+        <span asp-validation-for="TreatmentDuration" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TreatmentDescription" class="form-label">Treatment Description</label>
+        <input asp-for="TreatmentDescription" type="text" class="form-control" />
+        <span asp-validation-for="TreatmentDescription" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Price</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="TreatmentDate" class="form-label">Appointment Date</label>
+        <input asp-for="TreatmentDate" type="datetime-local" class="form-control" />
+        <span asp-validation-for="TreatmentDate" class="text-danger"></span>
+    </div>  
+
+    
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,4 +1,13 @@
 @model DentoApp.Models.TreatmentsViewModel
+@{
+    ViewData["Title"] = "Treatments";
+}
+<h1>Treatments</h1>
+
+<!-- CRUD Butonları -->
+<div class="mb-3">
+    <a class="btn btn-success" href="@Url.Action("Create")">Add New Treatment</a>
+</div>
 
 <h1>Treatments</h1>
 
@@ -6,7 +15,7 @@
     <thead>
         <tr>
             <th>Id</th>
-            <th>Name</th>
+            <th>Treatment Type</th>
             <th>Actions</th>
         </tr>
     </thead>
