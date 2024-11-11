@@ -6,5 +6,6 @@ namespace DentoApp.Data.Abstract
     {
         IQueryable<Treatment> Treatments { get; }
         void Add(Treatment treatment);
+        void Update(Treatment treatment);
     }
 }

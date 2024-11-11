@@ -17,6 +17,8 @@ namespace DentoApp.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Patients = new SelectList(_treatmentService.GetPatients(), "Id", "Name");
+            ViewBag.Dentists = new SelectList(_treatmentService.GetDentists(), "Id", "Name");
             var treatments = _treatmentService.GetTreatments().ToList();
             var viewModel = new TreatmentsViewModel
             {
@@ -43,6 +45,43 @@ namespace DentoApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(treatment);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Patients = new SelectList(_treatmentService.GetPatients(), "Id", "Name");
+            ViewBag.Dentists = new SelectList(_treatmentService.GetDentists(), "Id", "Name");
+            var treatment = _treatmentService.GetTreatmentById(id);
+            if (treatment == null)
+            {
+                return NotFound();  // Eğer hasta bulunamazsa 404 döner
+            }
+
+            var viewModel = new TreatmentsViewModel
+            {
+                SingleTreatment = treatment  // Güncellenecek hasta
+            };
+
+            return View(treatment);  // Hasta bilgilerini formda gösterir
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Treatment treatment)
+        {
+            if (ModelState.IsValid)
+            {
+                _treatmentService.UpdateTreatment(treatment);
+                return RedirectToAction(nameof(Index));
+            }
+
+            var viewModel = new TreatmentsViewModel
+            {
+                SingleTreatment = treatment  // Formdaki güncel verilerle geri dön
+            };
+
+            return View(viewModel);
         }
     }
 }

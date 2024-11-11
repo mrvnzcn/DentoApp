@@ -6,5 +6,6 @@ namespace DentoApp.Models
     {
         public List<Treatment> Treatments { get; set; } = new();
         public TreatmentType TreatmentType { get; set; }
+        public Treatment? SingleTreatment { get; set; }
     }
 }

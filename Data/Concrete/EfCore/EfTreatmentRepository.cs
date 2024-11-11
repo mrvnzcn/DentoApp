@@ -20,5 +20,10 @@ namespace DentoApp.Data.Concrete
             _context.Treatments.Add(treatment);
             _context.SaveChanges(); // Değişiklikleri kaydet
         }
+        public void Update(Treatment treatment)
+        {
+            _context.Treatments.Update(treatment);
+            _context.SaveChanges();
+        }
     }
 }

@@ -77,7 +77,7 @@ namespace DentoApp.Data.Concrete.EfCore
                             { 
                                 DentistId = dentist1.Id, 
                                 PatientId = patient1.Id, 
-                                TreatmentType="Dolgu", 
+                                TreatmentType="Braces", 
                                 TreatmentDate = DateTime.Now, 
                                 TreatmentDuration = 30, 
                                 TreatmentDescription = "Dolgu tedavisi", 
@@ -87,7 +87,7 @@ namespace DentoApp.Data.Concrete.EfCore
                             { 
                                 DentistId = dentist1.Id, 
                                 PatientId = patient1.Id, 
-                                TreatmentType="Kanal Tedavisi", 
+                                TreatmentType="Braces", 
                                 TreatmentDate = DateTime.Now.AddDays(1), 
                                 TreatmentDuration = 60, 
                                 TreatmentDescription = "Kanal tedavisi", 

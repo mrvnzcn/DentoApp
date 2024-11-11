@@ -1,8 +1,10 @@
+@using DentoApp.Models
+@using DentoApp.Helpers
 @model DentoApp.Models.TreatmentsViewModel
 @{
     ViewData["Title"] = "Treatments";
 }
-<h1>Treatments</h1>
+
 
 <!-- CRUD Butonları -->
 <div class="mb-3">
@@ -15,8 +17,14 @@
     <thead>
         <tr>
             <th>Id</th>
-            <th>Treatment Type</th>
             <th>Actions</th>
+            <th>Dentist</th>
+            <th>Patient</th>
+            <th>Type</th>
+            <th>Duration(h)</th>
+            <th>Price(TRY)</th>
+            <th>Date</th>
+            <th>Description</th>
         </tr>
     </thead>
     <tbody>
@@ -24,11 +32,17 @@
         {
             <tr>
                 <td>@treatment.Id</td>
-                <td>@treatment.TreatmentType</td>
                 <td>
                     <a href="@Url.Action("Edit", new { id = treatment.Id })">Edit</a>
                     <a href="@Url.Action("Delete", new { id = treatment.Id })">Delete</a>
                 </td>
+                <td>@treatment.Dentist?.Name</td>
+                <td>@treatment.Patient?.Name</td>
+                <td>@EnumHelper.GetDisplayName((TreatmentType)Enum.Parse(typeof(TreatmentType), treatment.TreatmentType))</td>
+                <td>@treatment.TreatmentDuration</td>
+                <td>@treatment.Price</td>
+                <td>@treatment.TreatmentDate</td>
+                <td>@treatment.TreatmentDescription</td>
             </tr>
         }
     </tbody>

@@ -1,6 +1,7 @@
 using DentoApp.Data.Abstract;
 using DentoApp.Entity;
 using DentoApp.Services.Abstract;
+using Microsoft.EntityFrameworkCore;
 
 namespace DentoApp.Services.Concrete
 {
@@ -18,13 +19,16 @@ namespace DentoApp.Services.Concrete
 
         public IQueryable<Treatment> GetTreatments()
         {
-            return _treatmentRepository.Treatments;
+            return _treatmentRepository.Treatments
+                    .Include(t => t.Patient)
+                    .Include(t => t.Dentist);
         }
 
         public Treatment GetTreatmentById(int id)
         {
-            return _treatmentRepository.Treatments.FirstOrDefault(t => t.Id == id);
-        }
+            var treatment = _treatmentRepository.Treatments.FirstOrDefault(t => t.Id == id) ?? throw new KeyNotFoundException($"Treatment with ID {id} was not found.");
+            return treatment;
+        }   
 
         public void AddTreatment(Treatment treatment)
         {
@@ -33,7 +37,7 @@ namespace DentoApp.Services.Concrete
 
         public void UpdateTreatment(Treatment treatment)
         {
-            // Güncellemek için ilgili repository methodunu çağır
+            _treatmentRepository.Update(treatment);
         }
 
         public void DeleteTreatment(int id)
