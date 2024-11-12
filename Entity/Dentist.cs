@@ -1,10 +1,12 @@
+using DentoApp.Models;
+
 namespace DentoApp.Entity;
 
 public class Dentist
 {
 public int Id { get; set; }
 public string? Name { get; set; }
-public string? Profession { get; set; }
+public DentistProfession Profession { get; set; }
 public int Age { get; set; }
 public string? PhoneNumber { get; set; }
 public string? Email { get; set; }

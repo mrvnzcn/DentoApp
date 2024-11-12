@@ -1,4 +1,5 @@
 using DentoApp.Data.Concrete.EfCore.Data;
+using DentoApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DentoApp.Data.Concrete.EfCore
@@ -23,7 +24,7 @@ namespace DentoApp.Data.Concrete.EfCore
                                             Email="taskinozcan@gmail.com", 
                                             Gender="male", 
                                             PhoneNumber="5332232121", 
-                                            Profession="endodonti", 
+                                            Profession=DentistProfession.GeneralDentist, 
                                             WorkingHours = new List<string> { "Weekdays 9am-5pm"}
                                             
                                             },
@@ -32,7 +33,7 @@ namespace DentoApp.Data.Concrete.EfCore
                                             Email="elihafif@gmail.com", 
                                             Gender="male", 
                                             PhoneNumber="5555555555", 
-                                            Profession="ortodonti", 
+                                            Profession=DentistProfession.Orthodontist, 
                                             WorkingHours = new List<string> { "Weekend 9am-2pm"}
                                             }
                     );

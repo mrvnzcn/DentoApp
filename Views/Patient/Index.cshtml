@@ -15,6 +15,12 @@
             <th>Id</th>
             <th>Name</th>
             <th>Actions</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Birth Date</th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +33,12 @@
                     <a class="btn btn-warning" href="@Url.Action("Edit", new { id = patient.Id })">Edit</a>
                     <a class="btn btn-danger" href="@Url.Action("Delete", new { id = patient.Id })">Delete</a>
                 </td>
+                <td>@patient.Address</td>
+                <td>@patient.Age</td>
+                <td>@patient.PhoneNumber</td>
+                <td>@patient.Email</td>
+                <td>@patient.Gender</td>
+                <td>@patient.BirthDate</td>
             </tr>
         }
     </tbody>
