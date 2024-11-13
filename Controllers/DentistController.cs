@@ -43,11 +43,6 @@ namespace DentoApp.Controllers
             return View(dentist);
         }
 
-        public IActionResult Delete()
-        {
-            return View();
-        }
-
         [HttpGet]
         public IActionResult Delete(int id)
         {

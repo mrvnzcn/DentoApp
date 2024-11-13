@@ -26,7 +26,10 @@ namespace DentoApp.Services.Concrete
 
         public Treatment GetTreatmentById(int id)
         {
-            var treatment = _treatmentRepository.Treatments.FirstOrDefault(t => t.Id == id) ?? throw new KeyNotFoundException($"Treatment with ID {id} was not found.");
+            var treatment = _treatmentRepository.Treatments
+            .Include(t => t.Dentist)
+            .Include(t => t.Patient)
+            .FirstOrDefault(t => t.Id == id) ?? throw new KeyNotFoundException($"Treatment with ID {id} was not found.");
             return treatment;
         }   
 
@@ -40,9 +43,16 @@ namespace DentoApp.Services.Concrete
             _treatmentRepository.Update(treatment);
         }
 
-        public void DeleteTreatment(int id)
+        public bool DeleteTreatment(int id)
         {
-            // Silmek için ilgili repository methodunu çağır
+            var treatment = _treatmentRepository.GetTreatmentById(id);
+            if(treatment == null)
+            {
+                return false;
+            }
+
+            _treatmentRepository.Delete(treatment);
+            return true;
         }
         public IQueryable<Patient> GetPatients() // Yeni metot
         {
@@ -53,5 +63,6 @@ namespace DentoApp.Services.Concrete
         {
             return _dentistRepository.Dentists;
         }
+
     }
 }

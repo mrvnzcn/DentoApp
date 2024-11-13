@@ -25,5 +25,17 @@ namespace DentoApp.Data.Concrete
             _context.Treatments.Update(treatment);
             _context.SaveChanges();
         }
+
+        public Treatment GetTreatmentById(int id)
+        {
+            return _context.Treatments
+                            .FirstOrDefault(p => p.Id == id);  // hekimin ID'sine göre ilk eşleşeni döner
+        }
+
+        public void Delete(Treatment treatment)
+        {
+            _context.Treatments.Remove(treatment);
+            _context.SaveChanges();
+        }
     }
 }

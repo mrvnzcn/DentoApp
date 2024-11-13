@@ -83,5 +83,33 @@ namespace DentoApp.Controllers
 
             return View(viewModel);
         }
+
+        [HttpGet]
+         public IActionResult Delete(int id)
+        {
+            var treatment = _treatmentService.GetTreatmentById(id);
+            if(treatment == null)
+            {
+                return NotFound();
+            }
+            return View(treatment);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var treatment = _treatmentService.GetTreatmentById(id);
+            if (treatment == null)
+            {
+                return NotFound();  // Hasta bulunamazsa 404 döner
+            }
+            var success = _treatmentService.DeleteTreatment(id);
+            if(success)
+            {
+                return RedirectToAction("Index");
+            }
+            
+            return View("Error");
+        }
     }
 }

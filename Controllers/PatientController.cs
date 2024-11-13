@@ -42,11 +42,6 @@ namespace DentoApp.Controllers
             return View(patient);
         }
 
-        public IActionResult Delete()
-        {
-            return View();
-        }
-
         [HttpGet]
         public IActionResult Delete(int id)
         {
