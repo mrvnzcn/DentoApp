@@ -23,7 +23,6 @@
             <th>Type</th>
             <th>Duration(h)</th>
             <th>Price(TRY)</th>
-            <th>Date</th>
             <th>Description</th>
         </tr>
     </thead>
@@ -41,7 +40,6 @@
                 <td>@EnumHelper.GetDisplayName((TreatmentType)Enum.Parse(typeof(TreatmentType), treatment.TreatmentType))</td>
                 <td>@treatment.TreatmentDuration</td>
                 <td>@treatment.Price</td>
-                <td>@treatment.TreatmentDate</td>
                 <td>@treatment.TreatmentDescription</td>
             </tr>
         }

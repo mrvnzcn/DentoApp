@@ -46,7 +46,6 @@ namespace DentoApp.Data.Concrete.EfCore
                         new Entity.Patient {Name = "Mervan", 
                                             Address="istanbul", 
                                             Age=27, 
-                                            BirthDate = new DateOnly(1997,8,7),
                                             Email="imervanozcan@gmail.com", 
                                             Gender="male", 
                                             PhoneNumber="5349318717", 
@@ -56,7 +55,6 @@ namespace DentoApp.Data.Concrete.EfCore
                         new Entity.Patient {Name = "Nurefsan", 
                                             Address="atina", 
                                             Age=21, 
-                                            BirthDate = new DateOnly(2002,9,25),
                                             Email="nurefsan-05@gmail.com", 
                                             Gender="female", 
                                             PhoneNumber="5388381212", 
@@ -79,7 +77,6 @@ namespace DentoApp.Data.Concrete.EfCore
                                 DentistId = dentist1.Id, 
                                 PatientId = patient1.Id, 
                                 TreatmentType="Braces", 
-                                TreatmentDate = DateTime.Now, 
                                 TreatmentDuration = 30, 
                                 TreatmentDescription = "Dolgu tedavisi", 
                                 Price = 150
@@ -89,7 +86,6 @@ namespace DentoApp.Data.Concrete.EfCore
                                 DentistId = dentist1.Id, 
                                 PatientId = patient1.Id, 
                                 TreatmentType="Braces", 
-                                TreatmentDate = DateTime.Now.AddDays(1), 
                                 TreatmentDuration = 60, 
                                 TreatmentDescription = "Kanal tedavisi", 
                                 Price = 300
@@ -119,7 +115,6 @@ namespace DentoApp.Data.Concrete.EfCore
                                 DentistId = dentist1.Id, 
                                 TreatmentId = treatment1.Id, 
                                 AppointmentDate = DateTime.Now, 
-                                TreatmentType = treatment1.TreatmentType, 
                                 Notes = "First appointment" 
                             },
                             new Entity.Appointment 
@@ -128,7 +123,6 @@ namespace DentoApp.Data.Concrete.EfCore
                                 DentistId = dentist1.Id, 
                                 TreatmentId = treatment1.Id, 
                                 AppointmentDate = DateTime.Now.AddDays(1), 
-                                TreatmentType = treatment1.TreatmentType, 
                                 Notes = "Second appointment" 
                             }
                         );

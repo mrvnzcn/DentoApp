@@ -46,14 +46,7 @@
         <label asp-for="Price" class="form-label">Price</label>
         <input asp-for="Price" class="form-control" />
         <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="TreatmentDate" class="form-label">Appointment Date</label>
-        <input asp-for="TreatmentDate" type="datetime-local" class="form-control" />
-        <span asp-validation-for="TreatmentDate" class="text-danger"></span>
-    </div>  
-
-    
+    </div> 
 
     <button type="submit" class="btn btn-primary">Create</button>
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>

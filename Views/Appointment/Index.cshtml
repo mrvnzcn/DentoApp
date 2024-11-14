@@ -1,4 +1,15 @@
+@using DentoApp.Models
+@using DentoApp.Helpers
 @model DentoApp.Models.AppointmentsViewModel
+
+@{
+    ViewData["Title"] = "Appointments";
+}
+
+<!-- CRUD Butonları -->
+<div class="mb-3">
+    <a class="btn btn-success" href="@Url.Action("Create")">Add New Appointment</a>
+</div>
 
 <h1>Appointments</h1>
 
@@ -6,8 +17,13 @@
     <thead>
         <tr>
             <th>Id</th>
-            <th>Name</th>
+            <th>Patient</th>
+            <th>Dentist</th>
+            <th>Treatment</th>
+            <th>Notes</th>
+            <th>Appointment Date</th>
             <th>Actions</th>
+
         </tr>
     </thead>
     <tbody>
@@ -15,9 +31,13 @@
         {
             <tr>
                 <td>@appointment.Id</td>
+                <td>@appointment.Patient?.Name</td>
+                <td>@appointment.Dentist?.Name</td>
+                <td>@appointment.Treatment?.TreatmentType</td>
                 <td>@appointment.Notes</td>
-                <td>
-                    <a href="@Url.Action("Edit", new { id = appointment.Id })">Edit</a>
+                <td>@appointment.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</td>
+                 <td>
+                    <a href="@Url.Action("Edit", new { id = appointment.Id })">Edit</a> |
                     <a href="@Url.Action("Delete", new { id = appointment.Id })">Delete</a>
                 </td>
             </tr>

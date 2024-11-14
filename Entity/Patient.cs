@@ -9,7 +9,6 @@ public class Patient
         public string? PhoneNumber { get; set; }
         public string? Email { get; set; }
         public string? Gender { get; set; }
-        public DateOnly BirthDate { get; set; }
         public List<Dentist>? Dentists { get; set; } = new List<Dentist>();
         public List<Appointment>? Appointments { get; set; } = new List<Appointment>();
         public List<Treatment>? Treatments { get; set; } = new List<Treatment>();
